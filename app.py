@@ -75,6 +75,6 @@ def get_posts_by_category(category_id):
         cursor.close()
         connection.close()
 
-# Start the server
+# Start the server (this is optional since we'll use Gunicorn in production)
 if __name__ == '__main__':
-    app.run(port=3000, debug=True)
+    app.run(host='0.0.0.0', port=3000, debug=True)
